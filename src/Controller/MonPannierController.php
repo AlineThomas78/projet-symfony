@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MonPannierController extends AbstractController
 {
     /**
-     * @Route("/mon/pannier", name="mon_pannier")
+     * @Route("/mon_pannier", name="mon_pannier")
      */
     public function index(): Response
     {

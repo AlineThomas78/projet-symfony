@@ -6,15 +6,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class MeConnecterController extends AbstractController
+class InscriptionController extends AbstractController
 {
     /**
-     * @Route("/me_connecter", name="me_connecter")
+     * @Route("/inscription", name="inscription")
      */
     public function index(): Response
     {
-        return $this->render('me_connecter/index.html.twig', [
-            'controller_name' => 'MeConnecterController',
+        return $this->render('inscription/index.html.twig', [
+            'controller_name' => 'InscriptionController',
         ]);
     }
 }

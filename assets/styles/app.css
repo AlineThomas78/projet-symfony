@@ -1207,3 +1207,197 @@ tr {
   vertical-align: inherit;
   border-color: inherit;
 }
+/* 
+PAGE_DUO
+PAGE_DUO */
+
+.col-xxxl-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.page-duo .panel_zone1 {
+  min-height: calc(300px + 2rem);
+}
+.panel2,
+.panel3 {
+  background-color: hsla(0, 0%, 100%, 0.95);
+  padding: 1em;
+}
+.panel2 {
+  box-shadow: 0 3px 10px #bcbcbc;
+  border-top: 2px solid #c66903;
+}
+
+.panel3 {
+  box-shadow: 0 0 10px #e2e2e2;
+  position: relative;
+}
+.mt-3,
+.my-3 {
+  margin-top: 1rem !important;
+}
+
+.btn:not(:disabled):not(.disabled),
+.clickable {
+  cursor: pointer;
+}
+.page-duo .button_zone a {
+  min-width: 236px;
+}
+a:link {
+  text-decoration: none;
+}
+.btn-primary {
+  color: #fff;
+}
+.btn-lg {
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+}
+
+.mr-sm-3,
+.mx-sm-3 {
+  margin-right: 1rem !important;
+}
+
+.d-sm-inline-block {
+  display: inline-block !important;
+}
+
+.btn-lg {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.btn-lg-2 {
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  margin-top: 10px;
+  font-size: 100%;
+}
+
+.ml-sm-3,
+.mx-sm-3 {
+  margin-left: 1rem !important;
+}
+.mt-sm-0,
+.my-sm-0 {
+  margin-top: 0 !important;
+}
+
+.d-sm-inline-block {
+  display: inline-block !important;
+}
+
+.col-xxxl-6 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.page-duo .salle_zone .salle-img {
+  height: 470px;
+}
+
+.mb-lg-0,
+.my-lg-0 {
+  margin-bottom: 0 !important;
+}
+
+.mr-md-3,
+.mx-md-3 {
+  margin-right: 1rem !important;
+}
+
+.float-lg-left {
+  float: left !important;
+}
+
+.img-fluid,
+.img-thumbnail {
+  max-width: 100%;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.ml-sm-2,
+.mx-sm-2 {
+  margin-left: 0.5rem !important;
+}
+
+.d-sm-inline {
+  display: inline !important;
+}
+
+.small,
+small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+.page-duo,
+.salle_zone,
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+dl,
+ol,
+ul {
+  margin-top: 0;
+}
+address,
+dl,
+ol,
+ul {
+  margin-bottom: 1rem;
+}
+
+/* DERNIER BLOC MASSAGES COUPLES
+DERNIER BLOC MASSAGES COUPLES */
+
+.ml-lg-3,
+.mx-lg-3 {
+  margin-left: 1rem !important;
+}
+
+.mb-lg-0,
+.my-lg-0 {
+  margin-bottom: 0 !important;
+}
+
+.float-lg-right {
+  float: right !important;
+}
+.img-fluid,
+.img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.btn-lg-3 {
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  margin-top: 10px;
+  font-size: 100%;
+
+}

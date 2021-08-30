@@ -6,15 +6,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class MeConnecterController extends AbstractController
+class ReinitialiserMdpController extends AbstractController
 {
     /**
-     * @Route("/me_connecter", name="me_connecter")
+     * @Route("/reinitialiser_mdp", name="reinitialiser_mdp")
      */
     public function index(): Response
     {
-        return $this->render('me_connecter/index.html.twig', [
-            'controller_name' => 'MeConnecterController',
+        return $this->render('reinitialiser_mdp/index.html.twig', [
+            'controller_name' => 'ReinitialiserMdpController',
         ]);
     }
 }

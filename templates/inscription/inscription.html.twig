@@ -1,0 +1,49 @@
+<div id="mainContent" class="page- content-shrink">
+    <div class="container py-5">
+        <h1 class="mb-5 text-center text-dark">Créer mon compte</h1>
+            <div class="ml-auto mr-auto content_zone text-center">
+
+                <form name="registration_form" method="POST">
+
+                    <div class="form-group">
+                        <label for="registration_form_email" class="required">Email</label>
+                        <input type="email" id="registration_form_email" name="registration_form[email]" required="required" class="text-center form-control">
+                    </div>
+
+                        <div class="form-group">
+                            <label for="registration_form_plainPassword_first" class="required">Mot de passe</label>
+                            <input type="password" id="registration_form_plainPassword_first" name="registration_form[painPassword][first]" required="required"
+                             class="text-center form-control">
+                        </div>
+
+                            <div class="form-group">
+                                <label for="registration_form_plainPassword_second" class="required">Confirmation du mot de passe </label>
+                                <input type="password" id="registration_form_plainPassword_second" name="registration_form[plainPassword][second]" required="required"
+                                class="text-center form-control">
+                            </div>
+
+                                <div class="form-group">
+                                    <div class="form-check">
+
+                                        <input type="checkbox" id="registration_form_agreeTerms" name="registration_form[agreeTerms]" required="required" class="form-check-input" value="1">
+                                        <label style="font-size: 0.8rem;" class="text-left form-check-label required" for="registration_form_agreeTerms">
+                                            En soumettant ce formulaire, j'accepte que les informations saisies dans ce formulaire soient utilisées, exploitées, traitées pour permettre de me 
+                                            recontacter, pour m’envoyer la newsletter, dans le cadre de la relation commerciale qui découle de cette commande
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                    <button class="btn btn-lg-3 btn-primary">Créer mon compte</button>
+                    
+                </form>
+
+                <div class="mt-1">
+                    
+                    Vous avez déjà un compte ? 
+                    <a class="d-block d-sm-inline" href="/me_connecter">Me connecter</a>
+                </div>
+
+            </div>
+    </div>
+</div>

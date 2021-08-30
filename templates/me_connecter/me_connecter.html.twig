@@ -1,0 +1,31 @@
+<div class="mainContent" class="page- content-shrink">
+    <div class="container py-5">
+        <h1 class="mb-5 text-center text-dark">Me connecter</h1>
+        <div class="ml-auto mr-auto content_zone text-center">
+            <form method="post">
+                <h1 class="h3 mb-3 font-weight-normal">Veuillez vous connecter</h1>
+                <label for="inputEmail" class="sr-only">Email</label>
+                <input type="email" value name="email" id="inputEmail" class="form-control text-center" placeholder="Email" required autofocus>
+                <label for="inputPassword" class="sr-only">Mot de passe</label>
+                <input type="password" name="password" id="inputPassword" class="form-control text-center" placeholder="Mot de passe" required>
+                <input type="hidden" name="_csrf_token" value="dCYQY12hvejiqgG8CAGYMNFLrd3CXySIhSy0AeRN5W8">
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me">
+                        Rester connecté
+                    </label>
+                </div>
+                <button class="btn btn-lg-2 btn-primary" type="submit">Me connecter</button>
+            </form>
+
+            <div class="mt-1">
+                <a href="/reinitialiser_mdp">Mot de passe oublié</a>
+            </div>
+
+            <div class="mt-1">
+                Vous n'avez pas encore de compte ?
+                <a class="d-block d-sm-inline" href="/inscription">Créer mon compte</a>
+            </div>
+        </div>
+    </div>
+</div>
