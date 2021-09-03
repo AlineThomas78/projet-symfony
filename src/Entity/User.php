@@ -2,13 +2,20 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 /**
- * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity(
+ * fields={"email"},
+ * message="Votre email est deja utilisé !"
+ * )
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id
@@ -19,6 +26,7 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
      */
     private $email;
 
@@ -29,18 +37,20 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="8", minMessage= "Votre mot de passe doit faire minimum 8 caractères")
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nom;
+    private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $prenom;
+
 
     public function getId(): ?int
     {
@@ -59,9 +69,9 @@ class User
         return $this;
     }
 
-    public function getRoles(): ?string
+    public function getRoles()
     {
-        return $this->roles;
+        return ['ROLE_USER'];
     }
 
     public function setRoles(string $roles): self
@@ -83,14 +93,16 @@ class User
         return $this;
     }
 
-    public function getNom(): ?string
+    public function getUsername(): ?string
     {
-        return $this->nom;
+        return $this->username;
+       
     }
 
-    public function setNom(string $nom): self
+
+    public function setUsername(string $username): self
     {
-        $this->nom = $nom;
+        $this->username = $username;
 
         return $this;
     }
@@ -106,4 +118,12 @@ class User
 
         return $this;
     }
+
+
+    public function eraseCredentials() {}
+    
+    public function getSalt() {}
+
+    public function getUserIdentifier() {}
+    
 }

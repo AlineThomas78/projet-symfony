@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class InscriptionController extends AbstractController
 {
     /**
-     * @Route("/inscription", name="inscription")
+     * @Route("/", name="inscription")
      */
     public function index(): Response
     {

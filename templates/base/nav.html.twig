@@ -18,6 +18,18 @@
                   <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link text-secondary" href="{{ path('me_connecter') }}">Me connecter</a>
                   </li>
+
+                   {% if not app.user %} 
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link text-secondary" href="{{ path('security_login') }}">Connexion</a>
+                  </li>
+
+                  {% else %}
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link text-secondary" href="{{ path('security_logout') }}">Deconnexion</a>
+                  </li>
+                  {% endif %}
+  
   
                   <li class="nav-item mx-0 mx-lg-1">
                     <a class="header-cart-link nav-link text-dark px-3 px-lg-5 text-uppercase text-center" href="{{ path('mon_pannier') }}">
@@ -40,6 +52,11 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
   
               <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ path('accueil') }}">Accueil</a>
+                </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="{{ path('presentation') }}">Présentation</a>
                 </li>
@@ -49,12 +66,7 @@
                 <li class="nav-item mx-0 mx-xl-1">
                   <a class="nav-link" href="{{ path('massages_duo') }}">Massages Duo</a>
                 </li>
-                <li class="nav-item mx-0 mx-xl-1">
-                  <a class="nav-link" href="{{ path('tarifs') }}">Tarifs</a>
-                </li>
-                <li class="nav-item mx-0 mx-xl-1">
-                  <a class="nav-link" href="{{ path('blog') }}">Blog</a>
-                </li>
+  
               </ul>
             </div>
   

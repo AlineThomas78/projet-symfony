@@ -369,6 +369,7 @@ p {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  font-weight: 400;
 }
 
 .gift-zone {
@@ -542,6 +543,7 @@ div.container.py-5 {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 .carousel-indicators {
   position: absolute;
@@ -723,7 +725,7 @@ h6 {
 h3 {
   font-family: Work Sans, sans-serif;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 /* P */
@@ -1046,6 +1048,7 @@ td {
 .massages-grid th.text_zone img {
   height: 30px;
   vertical-align: top;
+  margin-top: 5px;
 }
 *,
 :after,
@@ -1321,9 +1324,9 @@ a:link {
   float: left !important;
 }
 
-.img-fluid,
-.img-thumbnail {
+.img-fluid {
   max-width: 100%;
+  height: auto;
 }
 
 img {
@@ -1342,7 +1345,7 @@ img {
 
 .small,
 small {
-  font-size: 80%;
+  font-size: 120%;
   font-weight: 400;
 }
 
@@ -1399,5 +1402,86 @@ img {
   vertical-align: baseline;
   margin-top: 10px;
   font-size: 100%;
+}
 
+.ml-lg-3,
+.mx-lg-3 {
+  margin-left: 1rem !important;
+}
+
+.mb-lg-0,
+.my-lg-0 {
+  margin-bottom: 0 !important;
+}
+
+.float-lg-right {
+  float: right !important;
+}
+.img-fluid,
+.img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.ml-lg-3,
+.mx-lg-3 {
+  margin-left: 1rem !important;
+}
+.mb-lg-0,
+.my-lg-0 {
+  margin-bottom: 0 !important;
+}
+
+.massage_icon {
+  width: 30px;
+}
+.salle_zone ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.salle-img {
+  height: 200px;
+  width: 240px;
+  margin-top: -10px;
+  margin-left: 15px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.text-lg-left {
+  text-align: left !important;
+}
+
+.img-fluid-2 {
+  width: 440px;
+  height: auto;
+  margin-top: -10px;
+}
+
+.panel_zone2 {
+  min-height: calc(285px + 2rem);
+}
+
+.text-justify-1{
+  text-align: justify !important;
+  font-size: 20px;
+}
+
+.img-fluid-3 {
+  width: 340px;
+  height: auto;
+  margin-top: -10px;
 }
