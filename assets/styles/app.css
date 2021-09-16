@@ -1524,7 +1524,7 @@ label {
 
 .navbar-expand-xl .navbar-collapse {
   display: flex !important;
-  flex-basis: auto; 
+  flex-basis: auto;
 }
 
 .navbar-collapse {
@@ -1550,11 +1550,20 @@ label {
   margin-right: auto !important;
 }
 
-                                  /* //  FULL CALENDAR // */
-                                    /* //  FULL CALENDAR // */
+.row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
+}
 
-#calendrier {
-  width: 80%;
-  margin: auto;
- 
+div.form-group.mb-5 {
+  justify-content: center;
+}
+
+button#contact_envoyer.btn-primary.btn {
+  margin-left: 250px;
+  font-size: 20px;
+  margin-top: -40px;
 }
