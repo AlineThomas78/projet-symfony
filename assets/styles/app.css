@@ -23,7 +23,6 @@ a.nav-link {
 #navbarResponsive.collapse.navbar-collapse {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .navbar-expand-xl > .container,
@@ -543,7 +542,6 @@ div.container.py-5 {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .carousel-indicators {
   position: absolute;
@@ -1404,6 +1402,15 @@ img {
   font-size: 100%;
 }
 
+.btn-lg-4 {
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  margin-top: 10px;
+  font-size: 100%;
+}
+
 .ml-lg-3,
 .mx-lg-3 {
   margin-left: 1rem !important;
@@ -1475,7 +1482,7 @@ img {
   min-height: calc(285px + 2rem);
 }
 
-.text-justify-1{
+.text-justify-1 {
   text-align: justify !important;
   font-size: 20px;
 }
@@ -1484,4 +1491,70 @@ img {
   width: 340px;
   height: auto;
   margin-top: -10px;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+label {
+  display: inline-block;
+}
+
+.content_zone {
+  max-width: 500px;
+}
+
+.mr-auto,
+.mx-auto {
+  margin-right: auto !important;
+}
+
+.navbar-expand-xl .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto; 
+}
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  text-align: center;
+}
+
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+
+.ml-auto,
+.mx-auto {
+  margin-right: auto !important;
+}
+
+                                  /* //  FULL CALENDAR // */
+                                    /* //  FULL CALENDAR // */
+
+#calendrier {
+  width: 80%;
+  margin: auto;
+ 
 }

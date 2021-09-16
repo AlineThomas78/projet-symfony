@@ -1,20 +1,60 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Contact{% endblock %}
+
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<br><br><br>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<section>
+    <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-between gx-0 min-vh-100">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/MAMP/htdocs/Beauty Massages/Beauty_Massages/src/Controller/ContactController.php'|file_link(0) }}">src/Controller/ContactController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/MAMP/htdocs/Beauty Massages/Beauty_Massages/templates/contact/index.html.twig'|file_link(0) }}">templates/contact/index.html.twig</a></code></li>
-    </ul>
-</div>
+            <div class="col-12 col-md-6 py-8 py-md-11">
+                <h2 class="fw-bold text-center mb.2">Nous contacter.</h2>
+                <p class="fs-lg text-center text-muted mb-0">Une question ? N'hésitez pas à nous contacter.</p>
+                <hr class="hr-sm my-6 my-md-8 mx-auto bg-gray-300">
+
+                    {{ form_start(form) }}
+                        {% for message in app.flashes('success') %}
+                        <div class="alert alert-success">
+                            {{ message}}
+                        </div>
+                         {% endfor %} 
+                    
+                    <div class="my-custom-class-for-errors">
+                        {{ form_errors(form) }}
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label class="form-label" for="contactName">
+                            {{ form_label(form.nom) }}
+                        </label>
+                        {{form_widget(form.nom) }}
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label class="form-label" for="contactEmail">
+                            {{form_label(form.email) }}
+                        </label>
+                        {{form_widget(form.email) }}
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label class="form-label" for="contactMessage">
+                            {{form_label(form.message) }}
+                        </label>
+                        {{form_widget(form.message) }}
+                    </div>
+
+                    <div class="form-group mb-5">
+                        {{form_widget(form.envoyer)}}
+                    </div>
+                    
+                    {{form_end(form)}}
+
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

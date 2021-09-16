@@ -3,19 +3,19 @@
 
 {% block body %}
 <br><br><br>
-<br>
-<br>
-<br>
-<h1>Bonjour</h1>
+<br><br><br>
+
+<div class="ml-auto mr-auto content_zone text-center">
+<h1>Créer mon compte </h1>
 
 {{ form_start(form)}}
 
-{{ form_row(form.email, {'label': 'Adresse email', 'attr': {'placeholder': 'Adresse email...'}}) }}
-{{ form_row(form.password, {'label': 'Mot de passe', 'attr': {'placeholder': 'Mot de passe...'}}) }}
+{{ form_row(form.email, {'label': 'Adresse email', 'attr': {'placeholder': '...@gmail.com'}}) }} 
+{{ form_row(form.password, {'label': 'Mot de passe', 'attr': {'placeholder': 'Mot de passe ***'}}) }}
 
 
-
-<button type="submit" class="btn btn-sucess">Inscription</button>
+<button class="btn btn-lg-4 btn-primary" type="submit">Créer mon compte</button>
 {{ form_end(form)}}
+</div>
 
 {% endblock %}

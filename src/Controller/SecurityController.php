@@ -7,9 +7,11 @@ use App\Form\RegistrationType;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
@@ -28,13 +30,14 @@ class SecurityController extends AbstractController
          if($form->isSubmitted() && $form->isValid()){
              $hash =$encoder->encodePassword($user, $user->getPassword());
              $user->setUsername($user->getEmail());
+             $user->setRoles(array("ROLE_USER"));
 
              $user->setPassword($hash);
 
              $Manager->persist($user);
              $Manager->flush();
 
-             return $this->redirectToRoute('security_login');
+             return $this->redirectToRoute('app_login');
          }
 
          return $this->render('security/registration.html.twig', [
@@ -42,17 +45,29 @@ class SecurityController extends AbstractController
          ]);
      }
 
-        /**
-         * @Route("/connexion", name="security_login")
-         */
+     /**
+      * @Route("/login", name="app_login")
+      */
+     public function login(AuthenticationUtils $authenticationUtils): Response
+     {
+         // if ($this->getUser()) {
+         //     return $this->redirectToRoute('target_path');
+         // }
 
-        public function login() {
-            return $this->render('security\login.html.twig');
-        }
+         // get the login error if there is one
+         $error = $authenticationUtils->getLastAuthenticationError();
+         // last username entered by the user
+         $lastUsername = $authenticationUtils->getLastUsername();
 
-        /**
-         * @Route("/deconnexion", name="security_logout")
-         */
+         return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+     }
 
-         public function logout() {}
+     /**
+      * @Route("/logout", name="app_logout")
+      */
+     public function logout()
+     {
+         throw new \LogicException('This method can be blank');
+     }
+
 }

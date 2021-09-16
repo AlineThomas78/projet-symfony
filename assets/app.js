@@ -9,8 +9,11 @@
 import './styles/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 // start the Stimulus application
 import './bootstrap';
 import 'popper.js';
 import 'jquery';
+import 'remixicon/fonts/remixicon.css';
+
 

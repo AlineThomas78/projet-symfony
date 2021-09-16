@@ -31,9 +31,9 @@ class User implements UserInterface
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="json", length=255)
      */
-    private $roles;
+    private $roles = [];
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -71,10 +71,10 @@ class User implements UserInterface
 
     public function getRoles()
     {
-        return ['ROLE_USER'];
+        return $this->roles;
     }
 
-    public function setRoles(string $roles): self
+    public function setRoles($roles): self
     {
         $this->roles = $roles;
 
@@ -93,7 +93,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getUsername(): ?string
+    public function getUsername(): string
     {
         return $this->username;
        
@@ -124,6 +124,9 @@ class User implements UserInterface
     
     public function getSalt() {}
 
-    public function getUserIdentifier() {}
+    public function getUserIdentifier(): string {
+
+        return $this->username;
+    }
     
 }

@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\CommentairesRepository;
+use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=CommentairesRepository::class)
+ * @ORM\Entity(repositoryClass=ContactRepository::class)
  */
-class Commentaires
+class Contact
 {
     /**
      * @ORM\Id
@@ -28,14 +28,19 @@ class Commentaires
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
-    private $contenu;
+    private $message;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $createdat;
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isSend;
 
     public function getId(): ?int
     {
@@ -66,26 +71,38 @@ class Commentaires
         return $this;
     }
 
-    public function getContenu(): ?string
+    public function getMessage(): ?string
     {
-        return $this->contenu;
+        return $this->message;
     }
 
-    public function setContenu(string $contenu): self
+    public function setMessage(string $message): self
     {
-        $this->contenu = $contenu;
+        $this->message = $message;
 
         return $this;
     }
 
-    public function getCreatedat(): ?\DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->createdat;
+        return $this->createdAt;
     }
 
-    public function setCreatedat(\DateTimeInterface $createdat): self
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
-        $this->createdat = $createdat;
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getIsSend(): ?bool
+    {
+        return $this->isSend;
+    }
+
+    public function setIsSend(bool $isSend): self
+    {
+        $this->isSend = $isSend;
 
         return $this;
     }

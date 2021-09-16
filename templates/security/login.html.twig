@@ -1,26 +1,61 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Connexion/Inscription{% endblock %}
+
 {% block body %}
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="ml-auto mr-auto content_zone text-center">
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
 
-
-<h1>Connexion</h1>
-
-    <form action="{{ path('security_login') }}" method="POST">
-        <div class="form-group">
-            <input placeholder="Adresse email..." required name="_username" type="text" class="form-control">
+    {% if app.user %}
+        <div class="mb-3">
+            Vous etes Connecté {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
         </div>
+    {% endif %}
+     
+     <br> <br><br>
+     <br><br><br>
+     
+     
+     
+    
+     
+    <h1 class="h3 mb-3 font-weight-normal">Veuillez vous connecter</h1>
+    <label for="inputEmail" class="sr-only">Email</label>
+    <input type="email"  name="email" id="inputEmail" class="form-control text-center" placeholder="...@gmail.com" required autofocus>
+    <label for="inputPassword" class="sr-only">Mot de passe</label>
+    <input type="password" name="password" id="inputPassword"class="form-control text-center" placeholder="********" autocomplete="current-password" required>
 
-        <div class="form-group">
-            <input placeholder="Mot de passe..." required name="_password" type="password" class="form-control">
-        </div>
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}">
 
-        <div class="form-group">
-            <button type="submit" class="btn btn-succes">Connexion</button>
+     <button class="btn btn-lg-4 btn-primary" type="submit">Me connecter</button>
+
+   
+
+    <div class="mt-1">
+         <a  href="reinitialiser_mdp">Mot de passe oublié</a> </p>
+    </div>
+
+    <div class="mt-1">
+        Vous n'avez pas de compte ? <a class="d-block d-sm-inline" href="inscription">Crée mon compte</a>
+    </div>
+    
+    
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
         </div>
-    </form>
+    #}
+
+    
+</form>
+</div>
 {% endblock %}
