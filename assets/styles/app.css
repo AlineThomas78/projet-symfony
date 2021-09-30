@@ -30,10 +30,18 @@ a.nav-link {
   flex-wrap: nowrap;
 }
 
+.navbar-expand-xl {
+  flex-flow: row nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+
+
 .navbar > .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .container {
@@ -65,7 +73,6 @@ a.nav-link {
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1030;
   top: 0;
 }
 

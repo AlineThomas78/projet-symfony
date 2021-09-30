@@ -21,11 +21,29 @@ integrity="sha256-N4huVLjch/cYU8fcsyfMDy3iz7YzxY/Z1Btcj62y7ZE=" crossorigin="ano
 {% block body %}
 <br><br><br><br><br>
 
-<h1>Bonjour</h1>
-    <div id="calendrier">    
-    </div>
+{{ form_start(form) }}
+                        {% for message in app.flashes('success') %}
+                        <div class="alert alert-success">
+                            {{ message}}
+                        </div>
+                         {% endfor %} 
+                    
+                    <div class="my-custom-class-for-errors">
+                        {{ form_errors(form) }}
+                    </div>
 
-    <br><br><br><br><br><br>
+                    <div class="form-group mb-5">
+                        <label class="form-label" for="reservationDate">
+                            {{ form_label(form.reservationAt) }}
+                        </label>
+                        {{form_widget(form.reservationAt) }}
+                    </div>
+
+                    <div class="form-group mb-5">
+                        {{form_widget(form.envoyer)}}
+                    </div>
+                    
+                    {{form_end(form)}}
    
 {% endblock %}
 

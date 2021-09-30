@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}mon panier{% endblock %}
+
+{% block body %}
+<br><br><br>
+<br><br><br>
+
+    <div class="bg-light p-3">
+        <h1>Votre panier</h1>
+    </div>
+
+    {% if items | length > 0 %}
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Massages</th>
+                    <th>Prix</th>
+                    <th>Quantité</th>
+                    <th>total</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in items %}
+                    <tr>
+                        <td>{{item.massage.title}}</td>
+                        <td>{{item.massage.price1}}</td>
+                        <td><a href="/panier/decrease/{{item.massage.id}}">-</a> {{item.quantity}} <a href="/panier/increase/{{item.massage.id}}">+</a> </td>
+                        <td>{{item.massage.price1 * item.quantity}}</td>
+                        <td>
+                            <a href="{{ path('cart_remove', {'id': item.massage.id}) }}" class="btn btn-danger btn-sm">
+                                <i class="ri-delete-bin-line"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right"> Total :
+                     </td>
+                         
+                    <td>{{ total }}</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <a href="/reservation">Réservation</a>
+        
+    {% else %}
+          <p>surprise, c'est vide !!</p>
+    {% endif %}
+
+  
+
+{% endblock %}

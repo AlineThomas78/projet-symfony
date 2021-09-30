@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Massages;
+use App\Entity\Massage;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Massages|null find($id, $lockMode = null, $lockVersion = null)
- * @method Massages|null findOneBy(array $criteria, array $orderBy = null)
- * @method Massages[]    findAll()
- * @method Massages[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Massage|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Massage|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Massage[]    findAll()
+ * @method Massage[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class MassagesRepository extends ServiceEntityRepository
+class MassageRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Massages::class);
+        parent::__construct($registry, Massage::class);
     }
 
     // /**
-    //  * @return Massages[] Returns an array of Massages objects
+    //  * @return Massage[] Returns an array of Massage objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class MassagesRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Massages
+    public function findOneBySomeField($value): ?Massage
     {
         return $this->createQueryBuilder('m')
             ->andWhere('m.exampleField = :val')

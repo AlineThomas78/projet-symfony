@@ -1,0 +1,95 @@
+<div id="mainContent" class="page-">
+
+    <div class="container py-5">
+        <h1 class="mb-5 text-center text-dark">Massages</h1>
+        <p>Ouvert 7 jours sur 7, du lundi au dimanche de 10h à 22h, notre centre de massage,
+           Beauty Massage, vous propose de vous faire découvrir les massages du monde, à partir de 45 €.</p>
+        <div class="h2 text-primary">Choisissez votre massage, la durée en Solo ou en Duo</div>
+        <div class="h3">Cliquez sur le prix et commandez !</div>
+
+            <div class="massages-grid">
+                <div class="mt-3 table-responsive">
+        
+                    <table class="table mt-3 massage_types_table">
+                        
+                        <thead>
+                      
+                            <tr>
+
+                                <th class="icon_zone"></th>
+                                <th class="text_zone">
+                                    <img src="/img/pmassage/icone_massage_huile.png">
+                                    <span class="h2">Massages à l'huile</span>
+                                </th>
+
+                                <th class="pressure_zone">Pression</th>
+                                <th class="price_zone">30'</th>
+                                <th class="price_zone">45'</th>
+                                <th class="price_zone">1h</th>
+                                <th class="price_zone">2h</th>
+
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+
+                            {% for element in massage %}
+                            <tr data-id="15">
+                                <td class="icon_zone">
+                                    <img class="massage_icon" src="{{element.images}}">
+                                </td>
+
+                                <td class="text_zone">
+                                    <h2>{{element.title}}</h2>
+                                    <p class="catch_phrase">{{element.description}}</p>
+                                </td>
+
+                                <td class="pressure_zone">
+                                    <div class="pressure_icon">
+                                        <div title="Légère" class="pressure pressure_1 active"></div>
+                                        <div title="Modérèe" class="pressure pressure_2 active"></div>
+                                        <div title="Appuyée" class="pressure pressure_3"></div>
+                                        <div title="Profonde" class="pressure pressure_4"></div>
+                                    </div>
+                                </td>
+
+                                <td class="price_zone">
+                                    <div class="price solo order">
+                                        <a href="/panier/add/{{element.id}}/1" style="color: #cd9933;">{{element.price1}}€</a>
+                                    </div>
+                                </td>
+
+                                <td class="price_zone">
+                                    <div class="price solo order">
+                                        <a href="/panier/add/{{element.id}}/2" style="color: #cd9933;">{{element.price2}}€</a>
+                                    </div>
+                                </td>
+
+                                <td class="price_zone">
+                                    <div class="price solo order">
+                                        <a href="/panier/add/{{element.id}}/3" style="color: #cd9933;">{{element.price3}}€</a>
+                                    </div>
+                                </td>
+
+                                <td class="price_zone">
+                                    <div class="price solo order">
+                                        <a  href="/panier/add/{{element.id}}/4" style="color: #cd9933;">{{element.price4}}€</a>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
