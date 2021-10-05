@@ -37,8 +37,6 @@ a.nav-link {
   justify-content: flex-start;
 }
 
-
-
 .navbar > .container {
   display: flex;
   align-items: center;
@@ -161,20 +159,11 @@ li {
   margin-right: 0.25rem !important;
 }
 
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
-
 .container {
   max-width: 1140px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 div {
