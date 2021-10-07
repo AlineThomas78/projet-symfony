@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Reservation;
 use App\Form\ReservationType;
 use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Address;
 use App\Repository\MassageRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -47,7 +48,7 @@ class ReservationController extends AbstractController
             $Manager->flush();
 
             $email = (new Email())
-            ->from('thms1601@gmail.com')
+            ->from(new Address('thms1601@gmail.com', 'Beauty Massage'))
             ->to($user->getEmail())
             ->subject("Confirmation de réservation")
             ->text('hello ');

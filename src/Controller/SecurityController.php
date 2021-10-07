@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Form\RegistrationType;
 
 use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Address;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
@@ -38,7 +39,7 @@ class SecurityController extends AbstractController
              $Manager->flush();
             
              $email = (new Email())
-             ->from('thms1601@gmail.com')
+             ->from(new Address('thms1601@gmail.com', 'Beauty Massage'))
              ->to($user->getEmail())
              ->subject("Confirmation d'inscription")
              ->text('hello ');

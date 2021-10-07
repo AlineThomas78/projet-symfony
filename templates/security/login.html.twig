@@ -18,11 +18,7 @@
      <br> <br><br>
      <br><br><br>
      
-     
-     
-    
-     
-    <h1 class="h3 mb-3 font-weight-normal">Veuillez vous connecter</h1>
+    <h1 class="mb-5 text-center text-dark">Veuillez vous connecter</h1>
     <label for="inputEmail" class="sr-only">Email</label>
     <input type="email"  name="email" id="inputEmail" class="form-control text-center" placeholder="...@gmail.com" required autofocus>
     <label for="inputPassword" class="sr-only">Mot de passe</label>
@@ -36,7 +32,7 @@
    
 
     <div class="mt-1">
-         <a  href="reinitialiser_mdp">Mot de passe oublié</a> </p>
+         <a  href="{{ path('app_forgot_password_request') }}">Mot de passe oublié</a> </p>
     </div>
 
     <div class="mt-1">
