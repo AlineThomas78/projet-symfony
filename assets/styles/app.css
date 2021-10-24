@@ -15,27 +15,8 @@ a.nav-link {
   background-color: transparent;
 }
 
-.navbar-expand-xl .navbar-collapse {
-  display: flex !important;
-  flex-basis: auto;
-}
 
-#navbarResponsive.collapse.navbar-collapse {
-  display: flex;
-  align-items: center;
-}
 
-.navbar-expand-xl > .container,
-.navbar-expand-xl > .container-fluid {
-  flex-wrap: nowrap;
-}
-
-.navbar-expand-xl {
-  flex-flow: row nowrap;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-}
 
 .navbar > .container {
   display: flex;
@@ -78,22 +59,9 @@ a.nav-link {
   background-color: #c66903;
 }
 
-.navbar-expand {
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-}
 
-.navbar-expand .navbar-nav {
-  flex-direction: row;
-}
 
-.navbar {
-  display: flex;
-}
 
-.navbar-expand > .container {
-  flex-wrap: nowrap;
-}
 
 .mx-lg-1 {
   margin-left: 0.25rem !important;
@@ -105,15 +73,6 @@ li {
   text-align: -webkit-match-parent;
 }
 
-.navbar-nav {
-  display: flex;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  list-style-position: initial;
-  list-style-image: initial;
-  list-style-type: none;
-}
 
 .text-secondary {
   color: #fff !important;
@@ -128,9 +87,7 @@ li {
   color: #000 !important;
 }
 
-.d-xl-inline {
-  display: inline !important;
-}
+
 
 #secondaryNav .header-cart-link .nb_items {
   font-size: 0.8rem;
@@ -185,9 +142,7 @@ a {
   color: #c66903;
 }
 
-.d-block {
-  display: block !important;
-}
+
 
 .content-zone {
   width: 44%;
@@ -329,12 +284,6 @@ hr {
   overflow: hidden;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
 
 .col-md-3 {
   flex: 0 0 25%;
@@ -489,25 +438,6 @@ div.container.py-5 {
 /* CAROUSEL */
 /* CAROUSEL */
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.col-md-12 {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.col-lg-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
 
 .carousel-indicators li:after,
 .carousel-indicators li:before {
@@ -680,14 +610,7 @@ h1 {
   font-size: 2.5rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-}
+
 
 .mt-lg-0,
 .my-lg-0 {
@@ -705,16 +628,7 @@ h2 {
   font-size: 2rem;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  line-height: 1.2;
-  color: inherit;
-}
+
 
 h3 {
   font-family: Work Sans, sans-serif;
@@ -1204,7 +1118,7 @@ tr {
   vertical-align: inherit;
   border-color: inherit;
 }
-/* 
+/*
 PAGE_DUO
 PAGE_DUO */
 
@@ -1518,10 +1432,6 @@ label {
   margin-right: auto !important;
 }
 
-.navbar-expand-xl .navbar-collapse {
-  display: flex !important;
-  flex-basis: auto;
-}
 
 .navbar-collapse {
   flex-basis: 100%;

@@ -2,25 +2,25 @@
     <div class="container">
       <span class="ml-2 ml-xl-0 num-header text-white" href="06-44-71-78-42">
         <svg xmlns="http://www.w3.org/2000/svg" class="svg-inline--fa fa-phone-alt fa-w-16" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/>
-          <path d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 
+          <path d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1
            1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158
            1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z"/></svg>
             <span class="d-none d-sm-inline">Info & résa 7/7 +33 06-44-71-78-42</span>
       </span>
 
             <div class id="secondaryNavbarResponsive">
-  
+
                 <ul class="navbar-nav ml-auto">
-  
+
                   <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link text-secondary" href="reservation">
                       <svg xmlns="http://www.w3.org/2000/svg" class="svg-inline--fa fa-calendar-alt fa-w-14" viewBox="0 0 24 24" width="24" height="24">
                         <path fill="none" d="M0 0h24v24H0z"/><path d="M9 1v2h6V1h2v2h4a1 1
-                         0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2zm11 7H4v11h16V8zm-4.964 2.136l1.414 1.414-4.95 4.95-3.536-3.536L9.38 11.55l2.121 2.122 3.536-3.536z"/></svg> 
+                         0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2zm11 7H4v11h16V8zm-4.964 2.136l1.414 1.414-4.95 4.95-3.536-3.536L9.38 11.55l2.121 2.122 3.536-3.536z"/></svg>
                           <span class="d-none d-xl-inline">Réservation en ligne</span>
                     </a>
                   </li>
-  
+
                   <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link text-secondary" href="contact">
                       <svg xmlns="http://www.w3.org/2000/svg" class="svg-inline--fa fa-envelope fa-w-16" viewBox="0 0 24 24" width="24" height="24">
@@ -30,7 +30,7 @@
                     </a>
                   </li>
 
-                   {% if not app.user %} 
+                   {% if not app.user %}
                   <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link text-secondary" href="{{ path('app_login') }}">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/>
@@ -48,18 +48,18 @@
                     </a>
                   </li>
                   {% endif %}
-  
+
                   <li class="nav-item mx-0 mx-lg-1">
                     <a class="header-cart-link nav-link text-dark px-3 px-lg-5 text-uppercase text-center" href="{{ path('cart_index') }}">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0h24v24H0z"/><path d="M15.366 3.438L18.577 
-                         9H22v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h3.422l3.212-5.562 1.732 1L7.732 9h8.535l-2.633-4.562 1.732-1zM18.826 
+                        <path fill="none" d="M0 0h24v24H0z"/><path d="M15.366 3.438L18.577
+                         9H22v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h3.422l3.212-5.562 1.732 1L7.732 9h8.535l-2.633-4.562 1.732-1zM18.826
                          11H5.173l.667 8h12.319l.667-8zM13 13v4h-2v-4h2zm-4 0v4H7v-4h2zm8 0v4h-2v-4h2z"/></svg>
                           <span class="d-none d-xl-inline">panier</span>
                             <span class="nb_items">0</span>
                     </a>
                   </li>
-  
+
                 </ul>
             </div>
     </div>
@@ -67,17 +67,20 @@
   
                                      <!-- 2eme nav !! 
                                       2eme nav !!  -->
-  
+
   <nav class="navbar navbar-expand-xl bg-secondary fixed-top" id="mainNav">
       <div class="container">
           <div class="navbar-brand">
             <a id="logo-link" href="/">
-              <img src="/img/logo.png"></a>
+              <img src="/img/logo.png">BEAUTY MASSAGE</a>
           </div>
-          BEAUTY MASSAGE
-  
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-  
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="ri-menu-line"></i>
+        </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
               <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item">
@@ -95,11 +98,10 @@
                 <li class="nav-item mx-0 mx-xl-1">
                   <a class="nav-link" href="{{ path('massages_duo') }}">Massages Duo</a>
                 </li>
-                
+
               </ul>
             </div>
       </div>
-  </nav>  
-  
+  </nav>
   
   

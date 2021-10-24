@@ -11,9 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // start the Stimulus application
-import './bootstrap';
-import 'popper.js';
+import 'bootstrap';
 import 'jquery';
-import 'remixicon/fonts/remixicon.css';
-
-
+import 'popper.js';
+import 'remixicon/fonts/remixicon.css'
