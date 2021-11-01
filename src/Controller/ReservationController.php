@@ -51,7 +51,7 @@ class ReservationController extends AbstractController
             ->from(new Address('thms1601@gmail.com', 'Beauty Massage'))
             ->to($user->getEmail())
             ->subject("Confirmation de réservation")
-            ->text('hello ');
+            ->text('Votre réservation à bien été prise en compte chez Beauty Massage merci !  ');
             
            $mailer->send($email);
 

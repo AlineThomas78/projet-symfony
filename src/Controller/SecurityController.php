@@ -42,7 +42,7 @@ class SecurityController extends AbstractController
              ->from(new Address('thms1601@gmail.com', 'Beauty Massage'))
              ->to($user->getEmail())
              ->subject("Confirmation d'inscription")
-             ->text('hello ');
+             ->text('Bienvenu dans votre salon de massage '); 
              
             $mailer->send($email);
             $flash->add('success', 'votre inscription à bien été prise en compte. Merci');

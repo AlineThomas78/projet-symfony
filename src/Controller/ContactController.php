@@ -6,6 +6,7 @@ use App\Entity\Contact;
 use App\Form\ContactType;
 use App\Service\ContactService;
 use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Address;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
@@ -34,10 +35,10 @@ class ContactController extends AbstractController
             $Manager->flush();
 
             $email = (new Email())
-            ->from('thms1601@hmail.com')
+            ->from(new Address('thms1601@gmail.com', 'Beauty Massage'))
             ->to($contact->getEmail())
             ->subject("Nouveau message")
-            ->text('message ');
+            ->text("votre message à bien été transmis à l'équipe Beauty Massage merci ");
             
            $mailer->send($email);
           

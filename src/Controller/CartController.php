@@ -14,8 +14,9 @@ class CartController extends AbstractController
      */
     public function index(SessionInterface $session, MassageRepository $massageRepository)
     {
-        $panier = $session->get('panier', []);
 
+        $panier = $session->get('panier', []);
+        $countpanier = count($panier);
         $panierWithData = [];
 
         foreach($panier as $id => $quantity){
@@ -34,7 +35,8 @@ class CartController extends AbstractController
 
         return $this->render('cart/index.html.twig', [
             'items' => $panierWithData,
-            'total' => $total
+            'total' => $total,
+            'count' => $countpanier
         ]);
     }
 
@@ -45,7 +47,6 @@ class CartController extends AbstractController
     public function Add($id, SessionInterface $session){
 
         $panier = $session->get('panier', []);
-
         if(!empty($panier[$id])){
             $panier[$id]++;
         }else{

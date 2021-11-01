@@ -15,24 +15,12 @@ a.nav-link {
   background-color: transparent;
 }
 
-
-
-
-.navbar > .container {
-  display: flex;
-  align-items: center;
-}
-
 .container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 #secondaryNav {
@@ -48,48 +36,30 @@ a.nav-link {
   border-bottom-color: rgb(233, 236, 239);
 }
 
-.fixed-top {
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-}
-
 #secondaryNav {
   background-color: #c66903;
 }
 
-
-
-
-
-.mx-lg-1 {
-  margin-left: 0.25rem !important;
-  margin-right: 0.25rem !important;
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
 }
 
 li {
   display: list-item;
-  text-align: -webkit-match-parent;
 }
-
 
 .text-secondary {
   color: #fff !important;
 }
 
-#secondaryNav .header-cart-link {
+#secondaryNav .header-cart {
   background-color: #f8f9fa;
   min-width: 85px;
 }
 
-.text-dark {
-  color: #000 !important;
-}
-
-
-
-#secondaryNav .header-cart-link .nb_items {
+#secondaryNav .header-cart .nb_items {
   font-size: 0.8rem;
   margin-left: 4px;
   border-radius: 100%;
@@ -104,16 +74,6 @@ li {
   padding-bottom: 3px;
   padding-left: 6px;
   color: #fff;
-}
-
-.ml-auto,
-.mx-auto {
-  margin-left: auto !important;
-}
-
-.mx-lg-1 {
-  margin-left: 0.25rem !important;
-  margin-right: 0.25rem !important;
 }
 
 .container {
@@ -133,7 +93,12 @@ div {
   background-size: cover;
   position: relative;
 }
+                              /* fin de navBar */
+                            /* fin de navBar */
 
+* {
+  box-sizing: border-box;
+}
 .page-home .banner-zone {
   padding-top: 37.87%;
 }
@@ -141,8 +106,6 @@ div {
 a {
   color: #c66903;
 }
-
-
 
 .content-zone {
   width: 44%;
@@ -251,15 +214,6 @@ a {
   text-align: center !important;
 }
 
-.pb-5 {
-  padding-bottom: 3rem !important;
-}
-
-.pt-5 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem;
-}
-
 .text-primary {
   font-size: 2rem;
   color: #c66903;
@@ -309,11 +263,7 @@ h3 {
 
 p {
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: 400;
+  font-size: 20px;
 }
 
 .gift-zone {
@@ -628,12 +578,10 @@ h2 {
   font-size: 2rem;
 }
 
-
-
 h3 {
   font-family: Work Sans, sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 20px;
 }
 
 /* P */
@@ -641,19 +589,6 @@ h3 {
 
 .text-justify {
   text-align: justify !important;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
 }
 
 .page-presentation .our-massage-zone .panel {
@@ -1427,24 +1362,7 @@ label {
   max-width: 500px;
 }
 
-.mr-auto,
-.mx-auto {
-  margin-right: auto !important;
-}
 
-
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
-}
-
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
-  text-align: center;
-}
 
 .ml-auto,
 .mx-auto {
