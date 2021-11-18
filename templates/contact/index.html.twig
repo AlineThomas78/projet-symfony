@@ -16,12 +16,7 @@
                 <hr class="hr-sm my-6 my-md-8 mx-auto bg-gray-300">
 
                     {{ form_start(form) }}
-                        {% for message in app.flashes('success') %}
-                        <div class="alert alert-success">
-                            {{ message}}
-                        </div>
-                         {% endfor %} 
-                    
+                        
                     <div class="my-custom-class-for-errors">
                         {{ form_errors(form) }}
                     </div>

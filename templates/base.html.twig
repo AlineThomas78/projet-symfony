@@ -17,8 +17,14 @@
         <header>
             {% include 'base/nav.html.twig'%}
         </header>
-
+        {% for status, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{status}}" style="z-index: 999;"> {{message}}</div>
+            {% endfor %}
+        {% endfor %}
         {% block body %} {% endblock %}
+
+        
 
         {% include 'base/footer.html.twig'%}
     </body>
